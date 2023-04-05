@@ -20,3 +20,16 @@ This PowerShell script allows you to change the author and committer information
 
 ```powershell
 .\ChangeGitAuthor.ps1 -RepoFolderPath "C:\path\to\your\repository" -NewAuthor "New Author Name <new.author@example.com>"
+```
+
+Replace `C:\path\to\your\repository` with the actual path to your Git repository, and `New Author Name <new.author@example.com>` with the desired author name and email.
+
+## Parameters
+
+`-RepoFolderPath`: The path to the Git repository folder.
+`-NewAuthor`: The new author information in the format "Author Name author@email.com".
+
+## Notes
+
+- The script will change the author and committer information for all commits in the repository, including branches and tags.
+- Be cautious when using this script on shared repositories, as it will rewrite the commit history, which can cause issues for collaborators.
