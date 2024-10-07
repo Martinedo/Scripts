@@ -1,0 +1,1 @@
+ This script updates `CFBundleName` with the value from `CFBundleDisplayName` in all `Info.plist` files within .iOS project directories, excluding bin and obj. This will scan the root directory and apply the change recursively to any Info.plist file it finds.
