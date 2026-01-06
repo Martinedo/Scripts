@@ -1,0 +1,49 @@
+AUTOMATICKÁ ZMENA POZADIA PODĽA DÁTUMU
+=======================================
+
+Tento skript automaticky mení pozadie plochy na základe aktuálneho dátumu.
+
+AKO POMENOVAŤ SÚBORY S OBRÁZKAMI:
+----------------------------------
+
+Obrázky pomenujte podľa toho, kedy sa majú zobraziť. Skript hľadá súbory 
+v tomto poradí:
+
+1. PRESNÝ DÁTUM S ROKOM
+   Príklad: P_2026-01-06.jpg
+   Použije sa presne 6. januára 2026
+
+2. OBDOBIE S ROKOM
+   Príklad: P_2025-12-24_2026-01-07.jpg
+   Použije sa od 24. decembra 2025 do 7. januára 2026
+
+3. PRESNÝ DEŇ A MESIAC (každý rok)
+   Príklad: P_01-06.jpg
+   Použije sa každý rok 6. januára
+
+4. OBDOBIE DŇA A MESIACA (každý rok)
+   Príklad: P_12-24_01-07.jpg
+   Použije sa každý rok od 24. decembra do 7. januára
+   (funguje aj cez prelom roka)
+
+5. PREDVOLENÝ OBRÁZOK
+   Príklad: P_default.jpg
+   Použije sa, ak sa nenájde žiadny iný vhodný obrázok
+
+DÔLEŽITÉ:
+---------
+- Všetky názvy začínajú predponou "P_"
+- Podporované formáty: .jpg, .jpeg, .png, .bmp
+- Dátumy píšte s nulami (01 nie 1)
+- Pri období použite podčiarnik _ medzi dvoma dátumami
+- Skript zmení pozadie iba ak aktuálne pozadie začína na "P_"
+  (aby sa neprepisovalo vaše vlastné pozadie)
+
+PRÍKLADY POUŽITIA:
+------------------
+P_2026-12-25.jpg         → Vianoce 2026
+P_2026-12-24_2026-12-26.jpg → Vianočné sviatky 2026
+P_12-25.jpg              → Vianoce každý rok
+P_12-01_12-31.jpg        → Celý december každý rok
+P_06-01_08-31.jpg        → Letné mesiace
+P_default.jpg            → Keď nie je žiadna iná zhoda
